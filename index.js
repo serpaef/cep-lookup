@@ -9,7 +9,7 @@ app.get('/cep/:cep', (req, res) => {
   const { cep } = req.params;
   // Is `cep` in a valid format?
   if (validateFormat(cep)) return res.status(200).json({ message: 'CEP is valid!'})
-  return res.status(400).json({ message: 'try a valid CEP format'});
+  return res.status(400).json({ "error": { "code": "invalidData", "message": "CEP inválido" } });
 });
 
 const PORT = process.env.PORT || 3000;
