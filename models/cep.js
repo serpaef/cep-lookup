@@ -5,3 +5,7 @@ async function findByCEP(cep) {
   const [cep] = await connection.execute(query, [cep])
   return cep[0];
 }
+
+module.exports = {
+  findByCEP,
+};
