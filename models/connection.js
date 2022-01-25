@@ -9,4 +9,4 @@ const connection = mysql.createPool({
   database: MYSQL_DB_NAME,
 });
 
-module.exports = connection
+module.exports = connection;
